@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+<div>
+<button id="button" onclick="random_api()">CLICK FOR RANDOM STUFF!</button>
+</div>
+<img id="image" src="" alt="" width="450px" height="450px" hidden>
+<p id="text_content"></p>
+<script>
+    let random_api = function(){
+        let url = '/api/random';
+        fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            let img = document.getElementById("image");
+            let text_content = document.getElementById("text_content");
+            img.src = "";
+            img.hidden = true;
+            text_content.textContent = "";
+            if(res.hasOwnProperty('Message')){
+                text_content.textContent = res.Message;
+            }
+            else{
+                img.src = res.image_url;
+                img.hidden = false;
+                if(res.hasOwnProperty('joke')) {
+                    text_content.textContent = res.joke;
+                }
+                else if(res.hasOwnProperty('random_nr')){
+                    text_content.textContent = res.random_nr;
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>

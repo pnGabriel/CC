@@ -1,0 +1,19 @@
+{
+  "name": "tema1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bson": "^4.0.3",
+    "moment": "^2.24.0",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.2",
+    "npm": "^6.13.7"
+  }
+}
