@@ -1,0 +1,5 @@
+*.idea
+tema3/app/key/*
+tema3/node_modules/*
+tema3/database/database_api/key.json
+tema3/database/database_logging/key.json
